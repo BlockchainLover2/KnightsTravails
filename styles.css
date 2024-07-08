@@ -1,0 +1,67 @@
+html{
+    font-family: system-ui;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.container{
+    align-self: center;
+    display: grid;
+    grid-column: span 2;
+    --length:100px;
+    grid-template-columns: repeat(9,var(--length));
+    grid-auto-rows: var(--length);
+}
+.text{
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    >*:nth-child(2),:nth-child(4){
+        visibility: hidden;
+    }
+    padding-top: 3rem;
+}
+
+.black{
+    background: black;
+}
+.white{
+    background: white;
+}
+
+.block{
+    border: 1px solid black;
+    display: flex;
+    position: relative;
+}
+
+.block > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: brown;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.numBlock{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+.block:hover{
+    cursor: pointer;
+}
+
